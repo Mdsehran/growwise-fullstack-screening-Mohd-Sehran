@@ -475,7 +475,10 @@ Given the assignment time-box (4–6 hours), several intentional trade-offs were
 * H2 in-memory database instead of external infrastructure
 * No deployment pipeline
 * No external webhook execution
-* Focus on authorization, workflow correctness, and usability
+* H2 console enabled for local development only
+* No idempotency protection on retry endpoint
+* Retried attempts remain PENDING indefinitely
+* CORS allowlist configured for localhost development
 
 These trade-offs align with the assignment scope while keeping the implementation focused and maintainable.
 
