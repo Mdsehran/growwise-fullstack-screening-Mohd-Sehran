@@ -1,0 +1,16 @@
+# Frontend
+frontend/node_modules
+
+# Backend
+backend/target
+
+# IDE
+.idea
+.vscode
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

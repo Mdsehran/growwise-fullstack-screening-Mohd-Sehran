@@ -1,0 +1,36 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: webhook-dashboard
+
+  datasource:
+    url: jdbc:h2:mem:webhookdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+
+  # H2 console is a development convenience only. It is intentionally NOT
+  # gated by the X-Role admin interceptor (which only guards /api/admin/**),
+  # so it must never be enabled outside local development. See README
+  # "Trade-offs" section.
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        web-allow-others: false
+
+logging:
+  level:
+    com.growwise.webhookdashboard: INFO
