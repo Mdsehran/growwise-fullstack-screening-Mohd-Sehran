@@ -3,7 +3,6 @@
 Full Stack Screening Assignment
 
 **Candidate:** Mohd Sehran
-**Mail ID:** mohammedsehran40@gmail.com
 
 ## Project Goal
 
